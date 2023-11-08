@@ -74,14 +74,85 @@ let task = undefined
 console.log(task)
 let colour = null
 console.log(colour)
+
 // ***********C. Task 3. functions and contional statements************
 // N.B. READ WITH UNDERSTANDING!!!
 //  1.  Create 3 functions to convert R1000 into dollars, euros and pounds. Take function naming into consideration!
+let rands= 1000
+function toDollars() {
+   return rands*0.054
+  }
+   console.log(`R1000 is ${toDollars()} Dollars`)
+
+   function toEuros() {
+    return rands*0.051
+   }
+    console.log(`R1000 is ${toEuros()} Euros`)
+ 
+    function toPounds(pounds) {
+        return rands*pounds
+       }
+        console.log(`R1000 is ${toPounds(0.041)} Pounds`)
+ 
 //  2.  Create a function that takes a value and calculates the amount entered including VAT (15%), amount entered should be R400.
 //      Then display the message in the console, "The amount after tax is ...".
-//  3.  Declare 3 variables 1stNum, 2ndNum, 3rdNum and assign values of 8, 20 and 14 respectfully. Now write a function that compares “num1” and “num2” and 
+let amount = 400
+function calculate(value) {
+    return amount*value+amount
+   }
+    console.log(`The amount after tax is ${calculate(0.15)}`)
+
+//  3.  Declare 3 variables 1stNum, 2ndNum, 3rdNum and assign values of 8, 20 and 14 respectfully. Now write a function that compares “1stNum” and “2ndNum” and 
 //      displays the larger value.
+let firstNum = 8;
+let secondNum = 20;
+let thirdNum = 14;
+function greaterOrSmaller(firstNum,secondNum) {
+    if(firstNum>secondNum){
+    console.log('firstNum is not greater' )
+    }else{
+        console.log('secondNum is greater  ' +secondNum ) 
+    }
+    
+}
+greaterOrSmaller(firstNum,secondNum);
+
 //  4.  Write a function that determines whether “1stNum” is odd or even and displays the
 //      result. (Tip: remember the modulus operator %)
+function even_or_odd(num){
+    eo= num;
+    if(eo % 2 ===0){
+        console.log("even number")
+    }else{
+        console.log("odd number")
+
+    }
+}
+
+even_or_odd(firstNum);
+
+    
 //  5.  Next, write a JavaScript conditional statement to sort the three numbers(1stNum, 2ndNum, 3rdNum) from largest to smallest.
 
+function sortNumbersDescending(firstNum, secondNum, thirdNum) {
+    if (firstNum >= secondNum && firstNum >= thirdNum) {
+      if (secondNum >= thirdNum) {
+        console.log(`Sorted numbers: ${firstNum}, ${secondNum}, ${thirdNum}`);
+      } else {
+        console.log(`Sorted numbers: ${firstNum}, ${thirdNum}, ${secondNum}`);
+      }
+    } else if (secondNum >= firstNum && secondNum >= thirdNum) {
+      if (firstNum >= thirdNum) {
+        console.log(`Sorted numbers: ${secondNum}, ${firstNum}, ${thirdNum}`);
+      } else {
+        console.log(`Sorted numbers: ${secondNum}, ${thirdNum}, ${firstNum}`);
+      }
+    } else {
+      if (firstNum >= secondNum) {
+        console.log(`Sorted numbers: ${thirdNum}, ${firstNum}, ${secondNum}`);
+      } else {
+        console.log(`Sorted numbers: ${thirdNum}, ${secondNum}, ${firstNum}`);
+      }
+    }
+  }
+  sortNumbersDescending(firstNum, secondNum, thirdNum)
