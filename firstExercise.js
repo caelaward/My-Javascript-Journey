@@ -39,11 +39,41 @@ console.log( num1+ ` / ` +num2+ ` = ` +modulus +` remainder ` +modulus )
 
 // B. Task 2:Data Types
 // 1. Define the following data types with your own contents[ 'integer', 'decimal', 'string', 'array'(minimum: 3 items), 'Object'(minimum: 4 values)]
-// 2. Once you’ve created the variables, display them to the console
-// 3. Use the ‘typeof’ function to check each variable
-// 4. Create an array with numbers and strings. Comment what data type you expect this tobe. Then use the ‘typeof’ function on this array
-// 5. Create a null variable and an undefined variable
+let integer = 2
+let decimal = 2.3
+let string = "task2"
+let array = ['variables', 'operator', 'data type' ]
+let object = {
+    name: 'calla' ,
+    age: '20' ,
+    number: '1234567'
+}
 
+// 2. Once you’ve created the variables, display them to the console
+console.log(integer)
+console.log(decimal)
+console.log(string)
+console.log(array)
+console.log(object)
+
+// 3. Use the ‘typeof’ function to check each variable
+console.log(typeof(integer))
+console.log(typeof(decimal))
+console.log(typeof(string))
+console.log(typeof(array))
+console.log(typeof(object))
+
+
+// 4. Create an array with numbers and strings. Comment what data type you expect this to be. Then use the ‘typeof’ function on this array
+let numbers = [1 , 'two' , 3 , 'four' , 5]
+//I think it will show number since the number is read first. 
+console.log(typeof(numbers))
+
+// 5. Create a null variable and an undefined variable
+let task = undefined 
+console.log(task)
+let colour = null
+console.log(colour)
 // ***********C. Task 3. functions and contional statements************
 // N.B. READ WITH UNDERSTANDING!!!
 //  1.  Create 3 functions to convert R1000 into dollars, euros and pounds. Take function naming into consideration!
@@ -51,7 +81,7 @@ console.log( num1+ ` / ` +num2+ ` = ` +modulus +` remainder ` +modulus )
 //      Then display the message in the console, "The amount after tax is ...".
 //  3.  Declare 3 variables 1stNum, 2ndNum, 3rdNum and assign values of 8, 20 and 14 respectfully. Now write a function that compares “num1” and “num2” and 
 //      displays the larger value.
-//  4.  Write a function that determines whether “num1” is odd or even and displays the
+//  4.  Write a function that determines whether “1stNum” is odd or even and displays the
 //      result. (Tip: remember the modulus operator %)
 //  5.  Next, write a JavaScript conditional statement to sort the three numbers(1stNum, 2ndNum, 3rdNum) from largest to smallest.
 
