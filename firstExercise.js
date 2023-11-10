@@ -25,6 +25,7 @@
  let width = 5
  let area = length*width
  console.log( `The area of the rectangle is ` .concat(area))
+ console.log( `The area of the rectangle is  $(area)`)
 
 // 3.Create two variables called “num1” and “num2.” Assign each variable a value of 10 and 4 respectfully.
 // Calculate and display in the console what the remainder is if num1 is divided by num2.
@@ -36,6 +37,9 @@ console.log(modulus)
 // 4.Using the variables you created in the previous step, output the results
 // of the division in the following format: “num1 / num2 = x remainder y.” HINT: Backticks
 console.log( num1+ ` / ` +num2+ ` = ` +modulus +` remainder ` +modulus )
+//different option
+let answer = Math.floor(10%4)
+console.log(`${num1} / ${num2} = ${answer} remainder ${10%4}`)
 
 // B. Task 2:Data Types
 // 1. Define the following data types with your own contents[ 'integer', 'decimal', 'string', 'array'(minimum: 3 items), 'Object'(minimum: 4 values)]
@@ -43,7 +47,7 @@ let integer = 2
 let decimal = 2.3
 let string = "task2"
 let array = ['variables', 'operator', 'data type' ]
-let object = {
+const object = {
     name: 'calla' ,
     age: '20' ,
     number: '1234567'
@@ -79,6 +83,7 @@ console.log(colour)
 // N.B. READ WITH UNDERSTANDING!!!
 //  1.  Create 3 functions to convert R1000 into dollars, euros and pounds. Take function naming into consideration!
 let rands= 1000
+
 function toDollars() {
    return rands*0.054
   }
@@ -93,6 +98,21 @@ function toDollars() {
         return rands*pounds
        }
         console.log(`R1000 is ${toPounds(0.041)} Pounds`)
+
+       //different way to do it 
+        function convertEuros(a,b){
+          let answer = a*b
+         //return answer
+          //console.log(answer)
+          
+        } 
+        convertEuros(1000,0.054)
+
+        function convertPounds(a,b) {
+          let answer = a/b
+        }
+        convertPounds(a,22.84)
+        //tofixed allows you to round off to two decimals
  
 //  2.  Create a function that takes a value and calculates the amount entered including VAT (15%), amount entered should be R400.
 //      Then display the message in the console, "The amount after tax is ...".
@@ -101,6 +121,13 @@ function calculate(value) {
     return amount*value+amount
    }
     console.log(`The amount after tax is ${calculate(0.15)}`)
+
+    //different way
+    function VAT() {
+      let answer = 400*115/100
+      let answer2 =400*0.15
+      return answer2 + 400 
+    }
 
 //  3.  Declare 3 variables 1stNum, 2ndNum, 3rdNum and assign values of 8, 20 and 14 respectfully. Now write a function that compares “1stNum” and “2ndNum” and 
 //      displays the larger value.
@@ -117,6 +144,18 @@ function greaterOrSmaller(firstNum,secondNum) {
 }
 greaterOrSmaller(firstNum,secondNum);
 
+//different way
+//hoisting calling the code before giving function
+display(firstNum,secondNum)
+function display() {
+  if (firstNum>secondNum) {
+    console.log(firstNum);
+  }else{
+    console.log(secondNum);
+  }
+  
+}
+
 //  4.  Write a function that determines whether “1stNum” is odd or even and displays the
 //      result. (Tip: remember the modulus operator %)
 function even_or_odd(num){
@@ -131,24 +170,36 @@ function even_or_odd(num){
 
 even_or_odd(firstNum);
 
+//diferent way
+//=== checks data type and if numbers are equal
+//conditional statement
+function oddOrEven() {
+  if (num1%2 ==0) {
+    console.log("even number")
+  }else{
+    console.log("odd number")
+  }
+  
+}
+
     
 //  5.  Next, write a JavaScript conditional statement to sort the three numbers(1stNum, 2ndNum, 3rdNum) from largest to smallest.
 
 function sortNumbersDescending(firstNum, secondNum, thirdNum) {
-    if (firstNum >= secondNum && firstNum >= thirdNum) {
-      if (secondNum >= thirdNum) {
+    if (firstNum > secondNum && firstNum > thirdNum) {
+      if (secondNum > thirdNum) {
         console.log(`Sorted numbers: ${firstNum}, ${secondNum}, ${thirdNum}`);
       } else {
         console.log(`Sorted numbers: ${firstNum}, ${thirdNum}, ${secondNum}`);
       }
-    } else if (secondNum >= firstNum && secondNum >= thirdNum) {
-      if (firstNum >= thirdNum) {
+    } else if (secondNum >= firstNum && secondNum > thirdNum) {
+      if (firstNum > thirdNum) {
         console.log(`Sorted numbers: ${secondNum}, ${firstNum}, ${thirdNum}`);
       } else {
         console.log(`Sorted numbers: ${secondNum}, ${thirdNum}, ${firstNum}`);
       }
     } else {
-      if (firstNum >= secondNum) {
+      if (firstNum > secondNum) {
         console.log(`Sorted numbers: ${thirdNum}, ${firstNum}, ${secondNum}`);
       } else {
         console.log(`Sorted numbers: ${thirdNum}, ${secondNum}, ${firstNum}`);
@@ -156,3 +207,9 @@ function sortNumbersDescending(firstNum, secondNum, thirdNum) {
     }
   }
   sortNumbersDescending(firstNum, secondNum, thirdNum)
+
+  
+  //name function : normal fucntion
+  //function expression : declare function as a variable .. let display instead of function and then name
+  //arguements are displayed in function name(argu)
+ 
